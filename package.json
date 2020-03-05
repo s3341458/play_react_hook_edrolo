@@ -1,0 +1,51 @@
+{
+  "name": "react-coding-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "serve": "yarn run start-server & webpack-dev-server",
+    "start": "yarn run build && yarn run start-server",
+    "start-server": "node src/server.js",
+    "build": "webpack -p --progress",
+    "test": "jest",
+    "pretty": "prettier src/**/* --write"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@hot-loader/react-dom": "^16.11.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
+    "express": "^4.17.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "open": "^7.0.0",
+    "prettier": "^1.19.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.12.19",
+    "react-test-renderer": "^16.12.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.3.10"
+  },
+  "jest": {
+    "automock": false,
+    "moduleFileExtensions": [
+      "jsx",
+      "js"
+    ],
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    },
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ]
+  }
+}
